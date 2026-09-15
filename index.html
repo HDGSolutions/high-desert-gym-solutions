@@ -80,10 +80,11 @@ nav a:hover {
 .logo {
     width: 220px;
     max-width: 90%;
-    margin-bottom: 25px;
-    background: white;
+    margin: 0 auto 25px auto;
+    background: transparent; /* transparent background so image shows as intended */
     border-radius: 50%;
     padding: 10px;
+    display: block;
 }
 
 .hero h1 {
@@ -239,7 +240,8 @@ footer {
 
 <section class="hero">
 
-<img src="images/High Desert Gym Solutions LOGO.png" alt="High Desert Gym Solutions Logo" class="logo">
+<!-- Use the simple filename (no spaces) to avoid URL/encoding issues -->
+<img src="images/logo.png" alt="High Desert Gym Solutions Logo" class="logo">
 
 <h1>Fitness Equipment Repair & Preventive Maintenance</h1>
 
