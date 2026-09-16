@@ -109,6 +109,9 @@ nav a:hover {
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
 }
 
 .btn-gold {
@@ -116,9 +119,19 @@ nav a:hover {
     color: black;
 }
 
+.btn-gold:hover {
+    background: #e6c200;
+}
+
 .btn-dark {
     border: 2px solid white;
     color: white;
+    background: transparent;
+}
+
+.btn-dark:hover {
+    background: white;
+    color: var(--black);
 }
 
 /* Sections */
@@ -201,43 +214,86 @@ nav a:hover {
 .contact-box p {
     margin: 15px 0;
 }
-.contact-form{
-    max-width:700px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .contact-form input,
-.contact-form textarea{
-    width:100%;
-    padding:15px;
-    border:1px solid #ccc;
-    border-radius:6px;
-    font-size:16px;
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus{
-    outline:none;
-    border-color:#D4AF37;
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #D4AF37;
+    box-shadow: 0 0 5px rgba(212, 175, 55, 0.3);
 }
 
-.submit-btn{
-    background:#D4AF37;
-    color:#111;
-    border:none;
-    padding:15px;
-    font-size:18px;
-    font-weight:bold;
-    border-radius:6px;
-    cursor:pointer;
+.submit-btn {
+    background: #D4AF37;
+    color: #111;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.submit-btn:hover{
-    opacity:.9;
+.submit-btn:hover {
+    background: #e6c200;
 }
+
+/* Contact Info Section */
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #ddd;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 20px;
+}
+
+.contact-item h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.contact-item a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #e6c200;
+    text-decoration: underline;
+}
+
 /* Footer */
 
 footer {
@@ -364,11 +420,9 @@ services.
 Whether you manage a commercial gym, apartment complex, hotel,
 school, or home gym, equipment downtime costs money and creates
 frustration. High Desert Gym Solutions helps keep your fitness equipment
-safe, reliable, and operatingat peak performance through expert repair,
+safe, reliable, and operating at peak performance through expert repair,
 preventative maintenance, installation, and relocation services throughout New Mexico.
 </p>
-
-</div>
 
 </section>
 
@@ -401,6 +455,7 @@ preventative maintenance, installation, and relocation services throughout New M
     </div>
 
 </section>
+
 <section id="industries" class="dark-section">
 
 <div class="container">
@@ -448,6 +503,8 @@ Get fast, reliable service from High Desert Gym Solutions.
 
 </section>
 
+<section id="contact" class="container">
+
 <h2 class="section-title">Request Service</h2>
 
 <form class="contact-form">
@@ -472,11 +529,22 @@ Get fast, reliable service from High Desert Gym Solutions.
 
 </form>
 
-<p><strong>Phone:</strong> (575) 760-0401</p>
+<div class="contact-info">
 
-<p><strong>Email:</strong> info@highdesertgymsolutions.com</p>
+    <div class="contact-item">
+        <h3>📞 Phone</h3>
+        <p><a href="tel:5757600401">(575) 760-0401</a></p>
+    </div>
 
-<p><strong>Serving New Mexico</strong></p>
+    <div class="contact-item">
+        <h3>✉️ Email</h3>
+        <p><a href="mailto:info@highdesertgymsolutions.com">info@highdesertgymsolutions.com</a></p>
+    </div>
+
+    <div class="contact-item">
+        <h3>📍 Service Area</h3>
+        <p>Throughout New Mexico</p>
+    </div>
 
 </div>
 
